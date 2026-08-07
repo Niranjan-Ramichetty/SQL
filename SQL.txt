@@ -72,4 +72,6 @@ create database -  to create new database
 use db-name     -  to use the database
 select database -  to select current database
 drop db-name    -  to delete the database
+ 
+hi this is niranjan
 
