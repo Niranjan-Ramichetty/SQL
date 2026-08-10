@@ -1,0 +1,31 @@
+COMMANDS
+
+=> DDL Commands:
+
+it is used for create and update the table
+
+1.create: 
+create table table-name(col1 datatype (*constraint name*),  col2 datatype ....) -- id, name, address, age --  create table employee (id int, name varchar(20), address varchar(50), ageint);
+
+desc table_name; // show the structure of particular table
+describe table_name;
+
+2.Alter: 
+add column -- alter table table_name add column salary float; 
+add multiple columns -- alter table table_name add column salary float, ph_no bigint; 
+
+3.Remove:
+drop column -- alter table table_name drop column column_name;
+drop multiple column -- alter table table_name drop column column_name, column_name;
+
+modify datatypes:
+alter table table_name modify name column_name updatedataype;
+
+Rename column;
+alter table table_name rename column old_column name to new_column name
+
+4.drop:
+drop table table_name;
+
+5.Rename;
+rename table old table_name to new table_name;

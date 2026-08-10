@@ -81,13 +81,13 @@ It is used for  how to store data and how to manipulate into a DBMS
 
 Types of Data model:
 
-Hierarchal data model:
-  It organised data into a tree like structure (relation b/w parent and child)
-  Every child contains only one parent
-  Every parent can have multiple child's
-  In that model easy to retrieve and maintain the data
-  It is not comfortable for maintain the complex relationships
-  For example: - institute --- course --- students
+1. Hierarchal data model:
+   It organised data into a tree like structure (relation b/w parent and child)
+   Every child contains only one parent
+   Every parent can have multiple child's
+   In that model easy to retrieve and maintain the data
+   It is not comfortable for maintain the complex relationships
+   For example: - institute --- course --- students
 
 2. Network Data Model:
    The data is organized into nodes(entities) and edges(relationships)
@@ -178,7 +178,7 @@ It contains
 
 Datatypes in SQL:
 
- Numeric datatypes
+1. Numeric datatypes
 tiny int -- it stores very small amount of data
 small int
 medium int
@@ -187,14 +187,50 @@ high int
 float  --
 decimal -- (total no.of digits before decimal point, after decimal point)
 Boolean --
- string datatypes
+
+2. string datatypes
 char -- it contains fixed length - Ex: char(2)
 varchar -- it contains variable length - Ex: varchar(20)
 text
 Enum -- it is select only one value in a predefine list
 couser Enum -- (java, python, da)
- date/time datatypes
-    date  -- 'y-m-d'
-    time  -- 'h-m-s'
-    datetime   -- 'y-m-d, h-m-s'
-    timestamp  -- it return the default sys time
+
+3. date/time datatypes
+date  -- 'y-m-d'
+time  -- 'h-m-s'
+datetime   -- 'y-m-d, h-m-s'
+timestamp  -- it return the default sys time
+
+Constraints:
+It is used to rules applied in table columns, the main purpose of constraints are used to ensure data consistency, data integrity and data accuracy.
+1.unique
+2.not null
+3.primary key
+4.foreign key
+5.check
+6.default
+
+-> unique
+ ensure all the values are unique in a column.
+ex: st-id
+
+-> not null
+ every column must be contain a value.
+ex: names
+
+-> primary key
+ combination of not null and unique value.
+ex: st-id, st-name
+
+-> foreign key
+ it is used to maintain the relationship between tables.
+ex: customer, menu
+
+-> check
+ the column values must be contains to above mention the range of values
+ex: age, marks
+
+->default
+ if in case no insert any data in that column, on that time automatically to insert default value
+ex: address
+
