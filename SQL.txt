@@ -1,0 +1,236 @@
+SQL
+
+Data:
+collection of raw facts, figures and symbol
+it is meaningful and unprocessed
+
+Information:
+the data is processed or meaningful data
+ex: st = 101;
+
+File Management System(FMS):
+It is used before creation of database to store the data
+
+key functions of FMS.
+1. create file
+2. open file
+3. delete file
+4. read file
+5. share data
+6. to provide access
+
+Drawbacks of FMS.
+1. data inconsistency
+2. less security
+3. data redundancy
+4. backup/recovery
+5. data manipulation
+
+Database:
+It is a tool, used to store the data
+
+Management System:
+To manage data like retrieve, update, delete data
+
+
+DBMS:
+
+It stands for database management system, it is a software.
+the main purpose of DBMS is used to store data in permanently
+and manage/manipulate the given data.
+
+Advantages of DBMS:
+1. reduce data redundancy
+2. to provide more security
+3. to improve data inconsistency
+4. to maintain readability
+
+Types:
+1. NoSQL DBMS:
+   The data is stored into the unstructured format
+   Ex: mongo-dB, post-grace SQL
+2. RDBMS:
+   It is stands for relational DBMS
+   In RDBMS the data stored in rows and columns like table
+   Ex: MySQL, oracle, etc...
+
+MySQL:
+It is database, the data is stored into the table format,
+It provides the relational-ship.
+Easy to maintain the data.
+It is opensource database.
+
+Field: student-id = 101
+Record: collection of fields.
+   ex: s-id=101, s-name='Rahul', course='da'
+Table: collection of records and fields.
+
+### Cmd prompt: mysql -u root -p
+
+Show databases  -  to show the exited databases
+create database -  to create new database
+use db-name     -  to use the database
+select database -  to select current database
+drop db-name    -  to delete the database
+
+
+Data Model
+
+Data model is a way of organising the data and representing the data
+It is used for  how to store data and how to manipulate into a DBMS
+
+Types of Data model:
+
+1. Hierarchal data model:
+   It organised data into a tree like structure (relation b/w parent and child)
+   Every child contains only one parent
+   Every parent can have multiple child's
+   In that model easy to retrieve and maintain the data
+   It is not comfortable for maintain the complex relationships
+   For example: - institute --- course --- students
+
+2. Network Data Model:
+   The data is organized into nodes(entities) and edges(relationships)
+   In that mode one parent contains many childs
+   one child can have many parents.
+   It is flexible for hierarchal model.
+   For Example: - one student can take multiple courses
+                  each course can learn multiple students
+
+3. Object oriented model:
+   All data represented at object
+   every object can have two things - properties and behaviour
+   For Example: - using python
+ 
+
+4. Relational Data Model:
+   The data is stored into a table with columns(fields) and rows(records)
+   For Example: - student: s-id, s-name...etc
+
+Data model Levels:
+
+conceptual level - what we need
+logical level - to design the need
+physical level - to implement
+
+Introduction of SQL:
+
+SQL stands for structured query language
+It is used to communicate with databases such as MySQL, oracle, PostgreSQL....
+
+using SQL language:
+to create and delete structure in database
+to insert, update and delete data
+easy to retrieve the data into a database
+to provide the control access
+
+Types of SQL languages:
+DDL
+DML
+DQL
+DCL
+TCl
+
+DDL- Data Definition Language
+
+It is used to create and manipulate database
+such as tables, views, database and schema
+
+It contains 5 commands
+  i. create
+ ii. alter
+iii. drop
+ iv. truncate
+  v. rename
+
+DML - Data Manipulation Language
+
+It is used to add, update and delete the data
+
+It contains
+  i. Insert
+ ii. Update
+iii. Delete
+
+TCL - Transaction control language
+
+It is used to transactions
+
+It contains
+  i. Commit
+ ii. rollback
+iii. save point
+
+DQL - Data Query Language
+
+It is used to retrieve the data
+
+It contains
+  i. Select
+
+DCL - Data Control Language
+
+It is used to provide control for access the database
+
+It contains
+  i. Grant
+ ii. Revoke
+
+Datatypes in SQL:
+
+1. Numeric datatypes
+tiny int -- it stores very small amount of data
+small int
+medium int
+int
+high int
+float  --
+decimal -- (total no.of digits before decimal point, after decimal point)
+Boolean --
+
+2. string datatypes
+char -- it contains fixed length - Ex: char(2)
+varchar -- it contains variable length - Ex: varchar(20)
+text
+Enum -- it is select only one value in a predefine list
+couser Enum -- (java, python, da)
+
+3. date/time datatypes
+date  -- 'y-m-d'
+time  -- 'h-m-s'
+datetime   -- 'y-m-d, h-m-s'
+timestamp  -- it return the default sys time
+
+Constraints:
+It is used to rules applied in table columns, the main purpose of constraints are used to ensure data consistency, data integrity and data accuracy.
+1.unique
+2.not null
+3.primary key
+4.foreign key
+5.check
+6.default
+
+-> unique
+ ensure all the values are unique in a column.
+ex: st-id
+
+-> not null
+ every column must be contain a value.
+ex: names
+
+-> primary key
+ combination of not null and unique value.
+ex: st-id, st-name
+
+-> foreign key
+ it is used to maintain the relationship between tables.
+ex: customer, menu
+
+-> check
+ the column values must be contains to above mention the range of values
+ex: age, marks
+
+->default
+ if in case no insert any data in that column, on that time automatically to insert default value
+ex: address
+
