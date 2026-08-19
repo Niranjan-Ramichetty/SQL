@@ -1,0 +1,87 @@
+DDL COMMANDS
+
+=> DDL Commands:
+
+it is used for create and update the table
+
+1.create: 
+create table table-name(col1 datatype (*constraint name*),  col2 datatype ....) -- id, name, address, age --  create table employee (id int, name varchar(20), address varchar(50), ageint);
+
+desc table_name; // show the structure of particular table
+describe table_name;
+
+2.Alter: 
+add column -- alter table table_name add column salary float; 
+add multiple columns -- alter table table_name add column salary float, ph_no bigint; 
+
+3.Remove:
+drop column -- alter table table_name drop column column_name;
+drop multiple column -- alter table table_name drop column column_name, column_name;
+
+modify datatypes:
+alter table table_name modify name column_name updatedataype;
+
+Rename column;
+alter table table_name rename column old_column name to new_column name
+
+4.drop:
+drop table table_name;
+
+5.Rename;
+rename table old table_name to new table_name;
+
+EMPLOYEE TABLE:
+id, name, address, age, phone
+
+create table employee (id int primary key, name varchar(20) not null, address varchar(20) default 'Hyd', age int check (age>0 and age<120), phone bigint unique)
+
+create table dept(did int, dname varchar(20), foreign key (did) references employee(id));
+
+
+create table student (sid int primary key, sname varchar(20), age int and city varchar(20);
+
+create table emp (eid int primary key, ename varchar(20) not null, salary float, email varchar(20) unique);
+
+create department (did int primary key, dname varchar(20) unique, location varchar(20) default 'hyd',);
+
+create table product (pid int primary key, pname varchar(20) not null, price int check (price>0), quantity int check(quantity>=0));
+
+create table customer (cust_id int primary key);
+create table order (oid int, foreign key (oid) references customer(cust_id));
+
+
+=> Add constraints with existing table:
+
+create table emp(id int, age int, name varchar(20), address varchar(20), dp-id int, phone bigint);
+
+1. primary key
+add primary key -- alter table emp1 add constraint pk_id primary key(id);
+drop primary key -- alter table emp1 drop primary key;
+
+2.unique
+add unique key -- alter table emp add constraint uk unique(phone);
+drop unique key -- alter table emp drop constraint uk;
+
+3.check
+add check key -- alter table emp1 add constraint chk check(age>20);
+drop check key -- alter table emp1 drop constraint chk;
+
+4.not null
+add not null key -- alter table emp1 modify name varchar(20) not null;
+drop not null key -- alter table emp1 modify name varchar(20) null;
+
+5.default
+add default key -- alter table emp1 modify address varchar(20) default "hyd";
+drop default key -- alter table emp1 modify address varchar(20);
+
+
+create depts (did int primary key, dname varchar(20) unique, location varchar(20) default 'hyd',);
+
+
+=> procedural integrity constraints: we use if and check statements
+
+=> referential integrity constraint: to ensure using the foreign key constraint.  
+
+=> entity integrity constraint: primary key
+
+=> domain integrity constraint: unique
